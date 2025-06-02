@@ -15,7 +15,7 @@ const PreDisplay = () => {
 
   const fetchCourses = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/test/display');
+      const response = await axios.get('https://alic-backend-2.onrender.com/test/display');
       setCourses(response.data);
       setLoading(false);
     } catch (error) {
@@ -29,7 +29,7 @@ const PreDisplay = () => {
     const confirmDelete = window.confirm('Are you sure you want to delete this course?');
     if (!confirmDelete) return;
 
-    const deleteApi = `http://localhost:8000/test/${id}`;
+    const deleteApi = `https://alic-backend-2.onrender.com/test/${id}`;
 
     try {
       await axios.delete(deleteApi);

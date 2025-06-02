@@ -65,7 +65,7 @@ const Event = () => {
         formDataToSend.append('images', file);
       });
 
-      const response = await axios.post('http://localhost:8000/event/', formDataToSend, {
+      const response = await axios.post('https://alic-backend-2.onrender.com/event/', formDataToSend, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }

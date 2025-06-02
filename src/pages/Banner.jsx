@@ -64,7 +64,7 @@ const Banner = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:8000/banner/create',
+        'https://alic-backend-2.onrender.com/banner/create',
         formData,
         {
           headers: {

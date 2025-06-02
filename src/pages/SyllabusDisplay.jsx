@@ -16,7 +16,7 @@ const SyllabusDisplay = () => {
 
   const fetchSyllabus = async () => {
     try {
-      const response = await fetch('http://localhost:8000/syllabus/alldisplay');
+      const response = await fetch('https://alic-backend-2.onrender.com/syllabus/alldisplay');
       if (!response.ok) {
         throw new Error('Failed to fetch syllabus data');
       }
@@ -41,7 +41,7 @@ const SyllabusDisplay = () => {
     if (!confirm) return;
 
     try {
-      const response = await fetch(`http://localhost:8000/syllabus/delete/${id}`, {
+      const response = await fetch(`https://alic-backend-2.onrender.com/syllabus/delete/${id}`, {
         method: 'DELETE',
       });
 
